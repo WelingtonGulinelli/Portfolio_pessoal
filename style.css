@@ -8,7 +8,7 @@
 body{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     background-color: black;
 }
 nav{
@@ -193,6 +193,36 @@ section{
     font-weight: 700;
     box-shadow: 0 0 40px #077b32;
 }
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 1); /* Preto opaco */
+    border: 1px solid #077b32;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+}
+.dropdown-menu ul li {
+    margin: 10px 0;
+}
+.dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+.dropdown-menu ul li a:hover {
+    color: #077b32;
+}
+
 @media (max-width:884px) {
     nav .logo{
         position: absolute;
@@ -236,5 +266,44 @@ section{
     }
     .main-container button{
         margin-top: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+    .hamburg,
+    .cancel {
+        font-size: 2rem;
+        top: 5px;
+    }
+    .main-container {
+        padding: 10px;
+    }
+    .main-container .image {
+        width: 70%;
+        height: auto;
+    }
+    .main-container .content {
+        width: 100%;
+    }
+    .content h1 {
+        font-size: 1.2rem;
+    }
+    .content .typewriter {
+        font-size: 1.8rem;
+    }
+    .content p {
+        font-size: 0.8rem;
+    }
+    .social-links i {
+        width: 2rem;
+        height: 2rem;
+        margin: 3px 10px;
+    }
+    .content button {
+        width: 80%;
+        font-size: 100%;
     }
 }

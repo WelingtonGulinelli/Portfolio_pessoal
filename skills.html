@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Portfólio Welington</title>
 </head>
@@ -28,7 +26,14 @@
                         href="experiences.html">Experiências</a></div>
 
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="experiences.html">Experiências</a></li>
+                </ul>
+            </div>
         </div>
 
     </nav>
@@ -70,5 +75,16 @@
     </script>
     <script src="script.js"></script>
 </body>
+
+
+<script>
+    document.addEventListener('click', function (event) {
+        const menu = document.getElementById('dropdown-menu');
+        const hamburg = document.querySelector('.hamburg');
+        if (!menu.contains(event.target) && !hamburg.contains(event.target)) {
+            menu.style.display = 'none';
+        }
+    });
+</script>
 
 </html>

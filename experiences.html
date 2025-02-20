@@ -28,7 +28,14 @@
                         href="#">Experiências</a></div>
 
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="experiences.html">Experiências</a></li>
+                </ul>
+            </div>
         </div>
 
     </nav>
@@ -68,5 +75,15 @@
     </script>
     <script src="script.js"></script>
 </body>
+
+<script>
+    document.addEventListener('click', function (event) {
+        const menu = document.getElementById('dropdown-menu');
+        const hamburg = document.querySelector('.hamburg');
+        if (!menu.contains(event.target) && !hamburg.contains(event.target)) {
+            menu.style.display = 'none';
+        }
+    });
+</script>
 
 </html>
