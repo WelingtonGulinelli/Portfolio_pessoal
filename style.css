@@ -253,6 +253,8 @@ section{
 }
 
 @media (max-width:884px) {
+    
+
     .back-arrow {
         display: inline-flex; /* Torna a seta visível em telas pequenas */
     }
@@ -299,6 +301,11 @@ section{
     .main-container button{
         margin-top: 15px;
     }
+    .social-links i {
+        width: 2rem;
+        height: 2rem;
+        margin: 3px 10px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -329,11 +336,11 @@ section{
     .content p {
         font-size: 0.8rem;
     }
-    .social-links i {
+    /* .social-links i {
         width: 2rem;
         height: 2rem;
         margin: 3px 10px;
-    }
+    } */
     .content button {
         width: 80%;
         font-size: 100%;
