@@ -199,13 +199,12 @@ section{
     position: absolute;
     top: 10vh;
     right: 15px;
-    background-color: rgba(0, 0, 0, 1); /* Preto opaco */
+    background-color: black;
     border: 1px solid #077b32;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 100;
 }
-
 .dropdown-menu ul {
     list-style: none;
     padding: 10px;
@@ -256,10 +255,9 @@ section{
     }
 }
 @media (max-width:440px){
-    .main-container .image{
-        width: 50%;
-        height: 60%;
-        margin-bottom: 0px;
+    .main-container .image {
+        width: 70%;
+        height: auto;
     }
     .main-container .content{
         width: 80%;
